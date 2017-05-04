@@ -7,11 +7,13 @@ import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
 
 const ngRoute = require('angular-route');
+const ngLoadingBar = require('angular-loading-bar');
 
 import uiBootstrap from 'angular-ui-bootstrap';
 
 import {
-  routeConfig
+  routeConfig,
+  loadingBarConfig
 } from './app.config';
 
 import navbar from '../components/navbar/navbar.component';
@@ -22,10 +24,11 @@ import util from '../components/util/util.module';
 
 import './app.scss';
 
-angular.module('nutritionixAngularExampleApp', [ngCookies, ngResource, ngSanitize, ngRoute,
-  uiBootstrap, navbar, footer, calories, constants, util
+angular.module('nutritionixAngularExampleApp', [ngCookies, ngResource, ngSanitize, ngLoadingBar,
+  ngRoute, uiBootstrap, navbar, footer, calories, constants, util
 ])
-  .config(routeConfig);
+  .config(routeConfig)
+  .config(['cfpLoadingBarProvider', loadingBarConfig]);
 
 angular.element(document)
   .ready(() => {

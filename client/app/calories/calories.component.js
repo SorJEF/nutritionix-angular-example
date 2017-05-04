@@ -6,7 +6,7 @@ export class CaloriesController {
 
   foods = [];
   error = null;
-  query = "cheesburger\n16oz coke"
+  query = 'cheesburger\n16oz coke'
 
   /*@ngInject*/
   constructor($http, $scope) {
@@ -25,7 +25,7 @@ export class CaloriesController {
         this.clean();
       })
       .catch(err => {
-        this.error = err.message || (err.data && err.data.message);
+        this.error = err.message || err.data && err.data.message;
       });
   }
 

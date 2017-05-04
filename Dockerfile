@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # Install Node.js dependencies
 RUN npm install --global gulp
-RUN npm install
+RUN rm -rf node_modules && npm install
 RUN gulp build
 
 CMD [ "gulp", "serve:dist" ]

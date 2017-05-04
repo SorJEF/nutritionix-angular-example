@@ -2,6 +2,7 @@ $icon-font-path: '/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
+@import '~angular-loading-bar/build/loading-bar.min.css';
 
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
@@ -21,3 +22,9 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import 'calories/calories';
 @import '../components/footer/footer';
 /* endinject */
+
+#loading-bar {
+  .bar {
+    height: 5px;
+  }
+}

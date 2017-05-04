@@ -20,9 +20,9 @@
     <input type="submit" class="btn btn-default btn-block" ng-click="$ctrl.add($ctrl.query)" value="Add" />
   </form>
 
-  <div ng-if="$ctrl.foods.length">
+  <div ng-if="$ctrl.foods.length" class="food-log">
     <h3>Your food log contains:</h3>
-    <ul class="food-log">
+    <ul>
       <li ng-repeat="food in $ctrl.foods">
         <span ng-if="food.serving_qty > 1">
           {{food.serving_qty}} {{food.serving_unit}}
@@ -31,6 +31,6 @@
         <span class="badge">{{food.nf_calories}} Calories</span>
       </li>
     </ul>
-    <div>Total calories today: {{$ctrl.getTotal() | number : 2}} Calories</div>
+    <div class="total-calories">Total calories today: {{$ctrl.getTotal() | number : 2}} Calories</div>
   </div>
 </div>

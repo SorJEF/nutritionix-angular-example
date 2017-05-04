@@ -9,3 +9,8 @@ export function routeConfig($routeProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
 }
+
+export function loadingBarConfig(cfpLoadingBarProvider) {
+  cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
+  cfpLoadingBarProvider.includeSpinner = false;
+}

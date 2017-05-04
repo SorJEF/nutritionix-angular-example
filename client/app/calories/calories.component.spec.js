@@ -23,11 +23,16 @@ describe('Component: CaloriesComponent', function() {
       $http,
       $scope: scope
     });
-  }));
 
-  it('should attach a list of things to the controller', function() {
     caloriesComponent.add('test');
     $httpBackend.flush();
+  }));
+
+  it('should attach a list of foods to the controller', function() {
     caloriesComponent.foods.length.should.equal(2);
+  });
+
+  it('should calculate total calories', function() {
+    caloriesComponent.getTotal().should.equal(320);
   });
 });
