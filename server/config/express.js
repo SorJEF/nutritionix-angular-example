@@ -40,7 +40,6 @@ export default function(app) {
   app.use(methodOverride());
   app.use(cookieParser());
 
-
   if(env === 'development') {
     const webpackDevMiddleware = require('webpack-dev-middleware');
     const stripAnsi = require('strip-ansi');

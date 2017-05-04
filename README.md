@@ -1,5 +1,6 @@
-# Nutritionix Angular 1.x Example
+# Nutritionix Angular 1.x API examples
 
+A project with Nutritionix API examples which could be used as a boilerplate for your Angular 1.x web app
 
 ## Getting Started
 
@@ -11,7 +12,14 @@ Ensure [Docker](http://docker.com/) is installed and run:
     docker-compose up
 ```
 
-Navigate to `localhost:8080`
+Navigate to `localhost:3000`
+
+### Prerequisites
+
+For running only:
+- [Docker](http://docker.com/)
+
+For developing
 
 ### Developing
 
@@ -21,6 +29,10 @@ Navigate to `localhost:8080`
     - [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
 2. Run `npm install` to install server dependencies.
 3. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+
+## Build & development
+
+Run `gulp build` for building and `gulp serve` for preview.
 
 ## Testing
 

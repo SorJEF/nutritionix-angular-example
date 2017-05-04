@@ -10,5 +10,7 @@ module.exports = {
   SESSION_SECRET: 'nutritionixangularexample-secret',
 
   // Control debug level for modules using visionmedia/debug
-  DEBUG: ''
+  DEBUG: '',
+  NIX_APP_ID: '',
+  NIX_APP_SECRET: ''
 };

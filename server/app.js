@@ -8,11 +8,11 @@ import express from 'express';
 import config from './config/environment';
 import http from 'http';
 
-
 // Setup server
 var app = express();
 var server = http.createServer(app);
 require('./config/express').default(app);
+require('./services').default(app);
 require('./routes').default(app);
 
 // Start server

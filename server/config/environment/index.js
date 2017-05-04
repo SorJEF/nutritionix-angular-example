@@ -28,22 +28,15 @@ var all = {
   // Server IP
   ip: process.env.IP || '0.0.0.0',
 
-  // Should we populate the DB with sample data?
-  seedDB: false,
-
   // Secret for session, you will want to change this and make it an environment variable
   secrets: {
     session: 'nutritionix-angular-example-secret'
   },
 
-  // MongoDB connection options
-  mongo: {
-    options: {
-      db: {
-        safe: true
-      }
-    }
-  }
+  nutritionix: {
+    appId: process.env.NIX_APP_ID || 'nutritionix-application-id',
+    appKey: process.env.NIX_APP_SECRET || 'nutritionix-application-secret'
+  },
 };
 
 // Export the config object based on the NODE_ENV
